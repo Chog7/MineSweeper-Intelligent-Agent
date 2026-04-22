@@ -104,11 +104,28 @@ public class Board {
     }
 
     public void reveal(int x, int y) {
-        if (isGameOver || isGameWon || !isValidCoordinate(x, y)) return;
+        if (isGameOver || isGameWon) {
+            System.out.println("Game has ended.");
+            return;
+        }
+        
+        if (!isValidCoordinate(x, y)) {
+            System.out.println("Invalid move.");
+            return;
+        }
 
         Tile tile = grid[x][y];
-        if (tile.isRevealed() || tile.isFlagged()) return;
+        
+        if (tile.isRevealed()) {
+           System.out.println("Tile is already revealed.");
+            return;
+        }
 
+        if (tile.isFlagged()) {
+           System.out.println("Tile is flagged.");
+            return;
+        }
+        
         if (firstMove) {
             placeMines(x, y);
             firstMove = false;
