@@ -38,7 +38,7 @@ public boolean solveSingleStep() {
         }
       }
 
-      //Rule 1: all hidden are mines 
+      //Rule 1: all hidden are Mines 
       //if the number of hidden neighbors equals the remaning mines for this clue, 
       //then all the hidden neighbors MUST be mines. 
       if (hiddenCount > 0 && tile.getAdjacentMines() - flaggedCount == hiddenCount) {
@@ -49,3 +49,22 @@ public boolean solveSingleStep() {
           }
         }
       }
+
+      //Rule 2: All hidden are Safe 
+      //if the number of flagged neighbors equals the clue number, 
+      //then all remaining hidden neighbors MUST be safe 
+      if (hiddenCount > 0 && flaggedCount == tile.getAdjacentMines()) {
+        for (Tile hidden : hiddenNeighbors) {
+          if (!hidden.isRevealed() && !hidden.isFlagged()) {
+            board.reveal(hidden.getX(), hidden.getY());
+            actionTaken = true;
+          }
+        }
+      }
+    }
+    }
+  } 
+  
+  return actionTaken;
+}
+}
