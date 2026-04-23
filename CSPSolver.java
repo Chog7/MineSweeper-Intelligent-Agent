@@ -42,4 +42,10 @@ public boolean solveSingleStep() {
       //if the number of hidden neighbors equals the remaning mines for this clue, 
       //then all the hidden neighbors MUST be mines. 
       if (hiddenCount > 0 && tile.getAdjacentMines() - flaggedCount == hiddenCount) {
-
+        for (Tile hidden : hiddenNeighbors) {
+          if (!hidden.isFlagged()) {
+            board.flag(hidden.getX(), hidden.getY());
+            actionTaken = true;
+          }
+        }
+      }
