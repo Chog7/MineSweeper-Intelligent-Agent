@@ -38,3 +38,8 @@ public boolean solveSingleStep() {
         }
       }
 
+      //Rule 1: all hidden are mines 
+      //if the number of hidden neighbors equals the remaning mines for this clue, 
+      //then all the hidden neighbors MUST be mines. 
+      if (hiddenCount > 0 && tile.getAdjacentMines() - flaggedCount == hiddenCount) {
+
