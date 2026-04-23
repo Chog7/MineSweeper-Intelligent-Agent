@@ -21,6 +21,6 @@ This project implements a hybrid MineSweeper solver that combines constraint sat
 - `src/test/java/`: Unit tests and benchmarking scripts.
 
 ## Contributors
-- [Your Name]
-- [Classmate 1]
-- [Classmate 2]
+- Isabel Bacas
+- Micheal Meyers
+- Sarah Stenhouse 
