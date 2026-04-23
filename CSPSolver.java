@@ -13,3 +13,15 @@ public CSPSolver (Board board){
   this.board = board; 
 }
   
+//iterates through the board and applies simple constraint logic 
+//@return true if any action (reveal or flag) was taken, false otherwise 
+public boolean solveSingleStep() {
+  boolean actionTaken = false; 
+
+  for (int x = 0; x < board.getWidth(); x++) {
+    for (int y = 0; y < board.getHeight(); y++) { 
+    Tile tile = board.getTile(x, y); 
+
+    //we only care about revealed clues greater than 0 
+    if (tile.isRevealed() && tile.getAdjacentMines() > 0) {
+      
