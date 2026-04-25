@@ -22,5 +22,5 @@ This project implements a hybrid MineSweeper solver that combines constraint sat
 
 ## Contributors
 - Isabel Bacas
-- Micheal Meyers
+- Michael Meyers
 - Sarah Stenhouse 
