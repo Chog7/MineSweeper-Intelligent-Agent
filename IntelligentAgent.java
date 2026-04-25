@@ -26,3 +26,43 @@ public class IntelligentAgent {
     if (board.isGameOver() || board.isGameWon() {
       return "Game is over."; 
     }
+      
+    // 1. Try CSP logic (100% certain moves)
+    boolean cspMadeMove = cspSolver.solveSingleStep();
+      if (cspMadeMove) {
+          cspMovesMade++;
+          return "CSP logic executed certain moves.";
+      }
+    
+    // 2. If no certain moves, fallback to Probabilistic logic
+    Tile bestGuess = probSolver.findBestGuess();
+      if (bestGuess != null) {
+          board.reveal(bestGuess.getX(), bestGuess.getY());
+          probabilisticGuessesMade++;
+          return "Probabilistic logic guessed tile (" + bestGuess.getX() + ", " + bestGuess.getY() + ").";
+      }
+      
+      return "No moves available.";
+  }
+    
+    // Solves the board completely using a loop
+    // Useful for benchmarking without UI
+    public void solve() {
+        while (!board.isGameOver() && !board.isGameWon()) {
+            String result = step();
+            if (result.equals("No moves available.")) {
+                break;
+            }
+        }
+    }
+
+    // Getters for metrics
+    public int getCspMovesMade() {
+        return cspMovesMade;
+    }
+    
+    public int getProbabilisticGuessesMade() {
+        return probabilisticGuessesMade;
+    }
+}
+
