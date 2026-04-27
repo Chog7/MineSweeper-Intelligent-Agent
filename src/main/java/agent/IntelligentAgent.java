@@ -4,7 +4,7 @@ import game.Board;
 import game.Tile; 
 
 //The core brain that controls the decision making 
-//Combines CSP and Probalistic reasoning 
+//Combines CSP and Probabilistic reasoning 
 public class IntelligentAgent {
     private final Board board;
     private final CSPSolver cspSolver;
@@ -23,7 +23,7 @@ public class IntelligentAgent {
   //Executes one step of reasoning 
   //@return A string describing the action taken 
   public String step() { 
-    if (board.isGameOver() || board.isGameWon() {
+    if (board.isGameOver() || board.isGameWon()) {
       return "Game is over."; 
     }
       
