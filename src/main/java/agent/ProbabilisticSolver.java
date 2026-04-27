@@ -1,6 +1,7 @@
 package agent; 
 import game.Board;
 import game.Tile;
+import java.util.ArrayList;
 import java.util.List; 
 
 //Handles Probabilistic inference when CSP cannot find certain moves 
@@ -44,7 +45,7 @@ public Tile findBestGuess() {
   int centerY = board.getHeight() / 2;
   
   for (Tile hidden : hiddenTiles) {
-    double localProb = calculateLocalProbability(hidden)
+    double localProb = calculateLocalProbability(hidden); 
       
       // If local probability isn't informative (no revealed neighbors), use global
       double tileProb = (localProb >= 0) ? localProb : globalProb;
