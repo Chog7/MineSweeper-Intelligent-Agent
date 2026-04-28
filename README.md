@@ -10,17 +10,30 @@ This project implements a hybrid MineSweeper solver that combines constraint sat
 - **Analysis & Benchmarking**: Compares the agent's solve rate and speed against varying board sizes and human equivalence.
 
 ## Setup Instructions
-1. Clone the repository: `git clone <your-repo-url>`
-2. Open the project in your preferred IDE (e.g., IntelliJ IDEA, Eclipse, or VS Code).
+1. Open the project in your preferred IDE (e.g., IntelliJ IDEA, Eclipse, or VS Code).
+2. The IDE will automatically detect the `pom.xml` and download the necessary dependencies (like `commons-csv`).
 3. Ensure you have the appropriate Java Development Kit (JDK 11+) installed.
+
+## Running the Application
+
+### Visualization (UI Mode)
+To see the agent solve the board visually:
+- Run `src/main/java/game/Main.java` directly from your IDE.
+- Click the "Step Agent" button to watch the AI make 100% logical deductions or probabilistic guesses.
+
+### Benchmarking (Data Collection)
+To run the agent hundreds of times and generate a CSV file for your report:
+- Pass the argument `benchmark` to `Main.java` when running it.
+- Optionally, pass a second argument to specify the number of runs per difficulty (e.g., `benchmark 100`).
+- The results will be saved to `benchmark_results.csv` in the root project directory.
 
 ## Project Structure
 - `src/main/java/agent/`: Core AI logic (CSP Solver, Probability Inference).
 - `src/main/java/game/`: Minesweeper game mechanics, board state.
 - `src/main/java/ui/`: Visualization and user interface.
-- `src/test/java/`: Unit tests and benchmarking scripts.
+- `src/main/java/benchmark/`: Headless simulation and CSV data export.
 
 ## Contributors
-- [Your Name]
-- [Classmate 1]
-- [Classmate 2]
+- [Michael Meyers]
+- [Sarah Stenhouse]
+- [Isabel Bacas]
