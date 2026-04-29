@@ -1,3 +1,5 @@
+//Author - Michael (Chog7)
+
 package game;
 
 import agent.IntelligentAgent;
