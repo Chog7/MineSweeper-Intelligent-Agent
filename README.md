@@ -1,5 +1,8 @@
 # MineSweeper Intelligent Agent (MSIA)
 
+## Github Link
+https://github.com/Chog7/MineSweeper-Intelligent-Agent.git 
+
 ## Overview
 This project implements a hybrid MineSweeper solver that combines constraint satisfaction, probability inferencing, and visualization. The agent is capable of solving Minesweeper boards of varying difficulties (Easy to Hard).
 
