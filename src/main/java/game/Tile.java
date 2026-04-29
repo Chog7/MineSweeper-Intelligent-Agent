@@ -1,3 +1,5 @@
+//Author - Sarah (sstenh1)
+
 package game;
 
 // Single square on the Minesweeper board.
