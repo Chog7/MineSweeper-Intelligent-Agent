@@ -1,3 +1,5 @@
+//Author - Sarah (sstenh1)
+
 package game;
 
 import java.util.ArrayList;
