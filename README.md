@@ -10,20 +10,22 @@ This project implements a hybrid MineSweeper solver that combines constraint sat
 - **Analysis & Benchmarking**: Compares the agent's solve rate and speed against varying board sizes and human equivalence.
 
 ## Setup Instructions
-1. Open the project in your preferred IDE (e.g., IntelliJ IDEA, Eclipse, or VS Code).
+1. Download and open the project in your preferred IDE (e.g., IntelliJ IDEA, Eclipse, or VS Code).
 2. The IDE will automatically detect the `pom.xml` and download the necessary dependencies (like `commons-csv`).
 3. Ensure you have the appropriate Java Development Kit (JDK 11+) installed.
+4. The program supports both UI and benchmark modes. You can switch between them in `src/main/java/game/Main.java`.
 
 ## Running the Application
 
 ### Visualization (UI Mode)
 To see the agent solve the board visually:
+- Ensure the program is set to "UI" mode within `src/main/java/game/Main.java`.
 - Run `src/main/java/game/Main.java` directly from your IDE.
-- Click the "Step Agent" button to watch the AI make 100% logical deductions or probabilistic guesses.
+- Click the "Step Agent" button to watch the AI make logical deductions or probabilistic guesses.
 
 ### Benchmarking (Data Collection)
 To run the agent hundreds of times and generate a CSV file for your report:
-- Pass the argument `benchmark` to `Main.java` when running it.
+- Pass the argument `BENCHMARK` to `Main.java` when running it to switch to benchmarking mode.
 - Optionally, pass a second argument to specify the number of runs per difficulty (e.g., `benchmark 100`).
 - The results will be saved to `benchmark_results.csv` in the root project directory.
 
