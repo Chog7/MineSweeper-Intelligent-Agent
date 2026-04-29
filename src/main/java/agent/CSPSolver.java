@@ -1,3 +1,5 @@
+//Author - Isabel (ibacas1)
+
 package agent;
 
 import game.Board;
