@@ -1,4 +1,4 @@
-//Author - Miachael (Chog7)
+//Author - Michael (Chog7)
 
 package benchmark;
 
