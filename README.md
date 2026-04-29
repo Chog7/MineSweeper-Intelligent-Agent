@@ -36,6 +36,6 @@ To run the agent hundreds of times and generate a CSV file for your report:
 - `src/main/java/benchmark/`: Headless simulation and CSV data export.
 
 ## Contributors
-- [Michael Meyers]
-- [Sarah Stenhouse]
-- [Isabel Bacas]
+- [Michael Meyers - Chog7]
+- [Sarah Stenhouse - sstenh1]
+- [Isabel Bacas - ibacas1]
